@@ -1,0 +1,200 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.fadein {
+  opacity: 0;
+}
+.intro-section {
+    height: 100%;
+    padding-top: 100px;
+    text-align: center;
+}
+#myDiv {
+  display: none;
+}
+.locations-section, .barbers-section, .open-hours-section, .prices-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #FFFFFF;
+    position: relative;
+    padding-bottom: 130px;
+}
+.btn-circle {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 40px;
+  border-radius: 30px;
+  border: 1px solid rgba(0,0,0,0.5);
+}
+.next-page-link {
+  position:absolute;
+  bottom:20px;
+  left:0;
+  right:0;
+  font-size:40px;
+}
+
+.open-hours-section, .prices-section {
+    background: #EEEEEE;
+}
+
+.navbar.navbar-fixed-top {
+  opacity: 0.8;
+  background-color: #FFDC88;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: transparent;
+  letter-spacing: 1px;
+  border-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > .active > a {
+  color: #4E0701;
+}
+.navbar.top-nav-collapse {
+  background-color: #FFDC88;
+  img {
+    transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    -webkit-transform: scale(0.7, 0.7);
+    transition: transform 0.7s;
+  }
+}
+.navbar-header a {
+  position: absolute;
+  z-index: -1;
+  img {
+    margin-top: -30px;
+    padding: 0px;
+  }
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        opacity: 1;
+
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.contact-links {
+  margin-top: 20px;
+  > div {
+    margin: 50px 10px;
+    &:first-child {
+      margin-top:0px;
+    }
+    a {
+      width: 90%;
+    }
+  }
+}
+
+#open-hours .container {
+  width: 50%
+
+}
+#open-hours .container .row .col-lg-6:first-child {
+  text-align: right;
+}
+#open-hours .container .row .col-lg-6:last-child {
+  text-align: left;
+}
+.side-note {
+  margin-top: 10px;
+  text-align: center;
+}
+.line-curve-up, .line-curve-down {
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 20px;
+}
+
+.line-curve-down {
+  margin-bottom: -10px;
+  border-width: 1px 0 0 0;
+}
+
+.line-curve-up {
+  margin-top: -10px;
+  border-width: 0 0 1px 0;
+}
+
+
+// BACKGROUND VIDEO
+.fullscreen-bg {
+  background-image: url(/assets/bg-foto1.png);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#prices-link, #locations-link, #open-hours-link {
+  position:fixed;
+  left: 50%;
+  display:none;
+  bottom: 20px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../assets/bg-foto.png') center center/cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
